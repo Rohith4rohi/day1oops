@@ -21,6 +21,7 @@ class Book:
     def display_book_details(self):
         print(f"Book Title is:{self.title}")
         print("The Author is:",self.author)
+
 class IssuedBook(Book):
     def __init__(self,title,author, issued_to,issued_date):
         super().__init__(title,author)      # call parent constructor
@@ -32,6 +33,7 @@ class IssuedBook(Book):
         print(f"Issued to:",self.issued_to)
         print("Issued Date:",self.issued_date)
         #or print(super().title,super().author)
+        
 obj=IssuedBook("Python Programming","John Doe","Rohith","12-06-2024")  
 obj.display_issued_book_details()      
 

@@ -74,14 +74,61 @@ class CurrentAccount(BankAccount):
 # Testing Objects
 
 print("---- Savings Account ----")
-s1 = SavingsAccount("Rohith", 10000, 5)
-s1.deposit(2000)
-s1.add_interest()
-s1.withdraw(3000)
-s1.display_balance()
+sa = SavingsAccount("Rohith", 10000, 5)
+sa.deposit(2000)
+sa.add_interest()
+sa.withdraw(3000)
+sa.display_balance()
 
 print("\n---- Current Account ----")
 c1 = CurrentAccount("Rahul", 5000, 2000)
 c1.withdraw_with_overdraft(6000)
 c1.display_balance()
-                                         
+                                    
+                                    
+                                    
+# another program
+
+class father():
+    def __init__(self,father_name,surname):
+        self.surname=surname
+        self.father_name=father_name
+
+    def display_surname(self):
+        print("surname is",self.surname)
+    def display_fathername(self):
+        print("the father name is",self.father_name)    
+        
+
+class child(father):
+    def __init__(self,name,father_name,surname):
+        self.name=name
+        super().__init__(father_name,surname)
+    def display_name(self):
+        print("the name of the son",self.name)
+
+class daughter(father):
+    def __init__(self,name,father_name,surname):
+        self.name=name
+        super().__init__(father_name,surname)
+
+    def display_name(self):
+        print("the daughter name",self.name)     
+
+
+obj1=child("rohith","nagaraju","ts")
+print("---son name-----")
+obj1.display_name()
+obj1.display_fathername()   
+obj1.display_surname()
+
+
+print("----daughter name----")
+obj2=child("poorvika","nagaraju","ts")
+obj2.display_name()
+obj2.display_fathername()   
+obj2.display_surname()
+
+
+
+
